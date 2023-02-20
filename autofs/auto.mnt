@@ -1,0 +1,7 @@
+# Removable media
+# Note: Use UUID=<UUID> instead of /dev/<device><partition>
+#
+# To find the UUID of the device:
+# run 'blkid --match-tag UUID --output value /dev/<device><partition>'
+#
+#<name> -fstype=auto :UUID=<UUID>
