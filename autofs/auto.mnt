@@ -5,3 +5,4 @@
 # run 'blkid --match-tag UUID --output value /dev/<device><partition>'
 #
 #<name> -fstype=auto :UUID=<UUID>
+#<name> -fstype=vfat,dmask=000,fmask=111 :UUID=<UUID>
