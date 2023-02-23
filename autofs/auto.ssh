@@ -1,4 +1,5 @@
 # Remote SSH (SFTP)
+# Dependencies: sshfs
 
 # To access files in Android:
 # - Install 'sshelper' in Android (https://arachnoid.com/android/SSHelper/)
@@ -9,4 +10,5 @@
 #   # scp -P 2222 /root/.ssh/id_ed25519.pub root@<host>:${SSHELPER_HOME}/.ssh/authorized_keys
 # - Disable password logins in 'sshelper' and restart 'sshelper'.
 #
-#<name> -fstype=fuse,rw,allow_other,ConnectTimeout=10,ServerAliveInterval=15,ServerAliveCountMax=3,port=2222 :sshfs\#root@<host>\:/data/data/com.arachnoid.sshelper/home/SDCard/
+# NOTE: Make sure that 'user_allow_other' option is present (not commented) in '/etc/fuse.conf'.
+#<name> -fstype=fuse.sshfs,rw,allow_other,ConnectTimeout=10,ServerAliveInterval=15,ServerAliveCountMax=3,port=2222 root@<host>:/data/data/com.arachnoid.sshelper/home/SDCard/
