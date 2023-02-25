@@ -1,5 +1,5 @@
 # Removable media
-/mnt /etc/autofs/auto.mnt --timeout=15
+/media/drive /etc/autofs/auto.drive --timeout=15
 
 # Remote SSH (SFTP)
 /media/ssh /etc/autofs/auto.ssh --timeout=15
